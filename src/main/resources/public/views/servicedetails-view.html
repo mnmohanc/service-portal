@@ -1,0 +1,24 @@
+<div class="container pad-top">
+  <table class="table servicedetailtable">
+      <tr>
+          <td><h3>Details for {{servicedetail.name}}</h3></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td>Name</td>
+          <td>{{servicedetail.name}}</td>
+      </tr>
+      <tr>
+          <td>Description</td>
+          <td>{{servicedetail.description}}</td>
+      </tr>
+      <tr>
+          <td>Service Status</td>
+          <td>{{servicedetail.flag}}</td>
+      </tr>
+
+  </table>
+  <div>
+      <a class="btn btn-primary" ui-sref="editServiceDetail({id:servicedetail.id})">Edit</a>
+  </div>
+</div>
