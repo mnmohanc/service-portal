@@ -53,5 +53,13 @@ public class ServiceDetails {
 		return flag;
 	}
 
+	public void setFlag(String flag) {
+		this.flag = flag;
+	}
+	
+	public String  toString() {
+		return "service name : "+ this.name ;
+		
+	}
 	
 }

@@ -1,5 +1,6 @@
 package com.serviceportal.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.BeanUtils;
@@ -22,10 +23,22 @@ public class ServiceDetailsController {
 
 	@RequestMapping(value = "ServiceDetails", method = RequestMethod.GET)
 	public List<ServiceDetails> list() {
-		return ServiceDetailsRepository.findAll();
+		//List<ServiceDetails> stringList = new ArrayList<ServiceDetails>();
+		
+		List<ServiceDetails> ServiceDetailsList=ServiceDetailsRepository.findAll();
+		
+		for( ServiceDetails s: ServiceDetailsList ){
+
+			System.out.println(s);
+
+			}
+		
+		return ServiceDetailsList;
+		
+		//return ServiceDetailsRepository.findAll();
 	}
 
-	@RequestMapping(value = "ServiceDetails", method = RequestMethod.POST)
+	@RequestMapping(value = "AddServiceDetails", method = RequestMethod.POST)
 	public ServiceDetails create(@RequestBody ServiceDetails ServiceDetails) {
 		return ServiceDetailsRepository.saveAndFlush(ServiceDetails);
 	}

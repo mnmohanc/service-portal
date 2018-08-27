@@ -5,14 +5,15 @@
           <td><h3>All ServiceDetails</h3></td>
           <td></td>
       </tr>
-      <tr ng-repeat="servicedetail in servicedetails">
-          <td>{{servicedetail.name}}</td>
-          <td>{{servicedetail.description}}</td>
-          <td>{{servicedetail.flag}}</td>
+      <tr ng-repeat="ServiceDetail in ServiceDetails">
+          <td>{{ServiceDetail.name}}</td>
+          <td>{{ServiceDetail.description}}</td>
+          <td>{{ServiceDetail.flag}}</td>
           <td>
-              <a class="btn btn-primary" ui-sref="viewServiceDetail({id:servicedetail.id})">View</a>
-              <a class="btn btn-danger"  ng-click="deleteServiceDetail(servicedetail)">Delete</a>
+              <a class="btn btn-primary" ui-sref="viewServiceDetails({id:ServiceDetail.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteServiceDetails(ServiceDetail)">Delete</a>
           </td>
       </tr>
   </table>
 </div>
+

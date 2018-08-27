@@ -1,5 +1,7 @@
-angular.module('app.controllers', []).controller('ServiceDetailsController', function($scope, $state, popupService, $window, ServiceDetails) {
-  $scope.ServiceDetailss = ServiceDetails.query(); //fetch all ServiceDetailss. Issues a GET to /api/vi/ServiceDetailss
+angular.module('app.controllers', []).controller('ServiceDetailsListController', function($scope, $state, popupService, $window, ServiceDetails) {
+  $scope.ServiceDetails = ServiceDetails.query(); //fetch all ServiceDetailss. Issues a GET to /api/vi/ServiceDetailss
+  
+  
 
   $scope.deleteServiceDetails = function(ServiceDetails) { // Delete a ServiceDetails. Issues a DELETE to /api/v1/ServiceDetailss/:id
     if (popupService.showPopup('Really delete this?')) {
